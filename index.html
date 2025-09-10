@@ -1,107 +1,76 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Phanicha Krungsantia</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
+/* Font */
+body {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
 
-    /* Header */
-    header { background: linear-gradient(135deg, #0d6efd, #6610f2); color: white; text-align: center; padding: 3rem 1rem; }
-    header img { width: 130px; height: 130px; border-radius: 50%; border: 4px solid #fff; margin-bottom: 1rem; }
-    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; opacity: 0.9; }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #000;
+  position: sticky;
+  top: 0;
+}
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4da6ff;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar ul li a:hover {
+  color: #4da6ff;
+}
 
-    /* Nav */
-    nav { margin-top: 1rem; }
-    nav a { color: white; margin: 0 15px; font-weight: bold; text-decoration: none; }
-    nav a:hover { color: #ffd700; }
-
-    /* Container */
-    .container { max-width: 1000px; margin: auto; padding: 2rem; }
-    section { margin-bottom: 3rem; }
-    section h2 { color: #0d6efd; margin-bottom: 1rem; font-size: 1.6rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
-    .card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 1rem; }
-
-    /* Skills */
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill { background: #0d6efd; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; }
-
-    /* Footer */
-    footer { text-align: center; background: #eee; padding: 1rem; margin-top: 2rem; }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <!-- เปลี่ยน URL รูปตามต้องการ -->
-    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Profile Picture">
-    <h1>Phanicha Krungsantia</h1>
-    <p>Frontend Developer | Web Developer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <div class="container">
-
-    <!-- About -->
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="card">
-        <p>สวัสดีค่ะ ดิฉัน <b>ภาณิชา กรุงสันเทียะ</b> นักศึกษาสาขาวิทยาการคอมพิวเตอร์ NRRU  
-        สนใจด้าน Web Development และ UX/UI Design  
-        กำลังหาที่ฝึกงานในตำแหน่ง Frontend / Web Developer 🚀</p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card skills">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">PHP</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">Figma</span>
-        <span class="skill">GitHub</span>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="card">
-        <h3>🏢 Dormitory Management System "มณตา"</h3>
-        <p>ระบบจัดการผู้เช่า, ใบแจ้งหนี้, การชำระเงิน และการแจ้งซ่อม</p>
-        <p><a href="https://github.com/phanicha7041/dormitory-system" target="_blank">🔗 ดูโค้ดบน GitHub</a></p>
-      </div>
-      <div class="card">
-        <h3>📊 Queueing Analysis Poster</h3>
-        <p>วิเคราะห์ระบบคิวร้านอาหารด้วย M/M/s Model และจัดทำโปสเตอร์งานวิจัย</p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:phanicha@gmail.com">phanicha@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/phanicha7041" target="_blank">github.com/phanicha7041</a></p>
-      </div>
-    </section>
-
-  </div>
-
-  <footer>
-    <p>© 2025 Phanicha Krungsantia | Portfolio</p>
-  </footer>
-</body>
-</html>
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #000814, #001f3f, #001233);
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+.hero h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+.hero h2 span {
+  color: #4da6ff;
+}
+.hero p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #ddd;
+}
+.btn {
+  background: #4da6ff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #007bff;
+}
